@@ -124,6 +124,7 @@ class ArticleListViewController: UIViewController {
 }
 
 extension ArticleListViewController: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         articleListViewModel.articles.count
     }
@@ -136,6 +137,13 @@ extension ArticleListViewController: UITableViewDelegate, UITableViewDataSource,
             self?.bookMark(article: article)
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = ArticleDetailsViewController()
+        vc.hidesBottomBarWhenPushed = true
+        vc.article = articleListViewModel.articles[indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
