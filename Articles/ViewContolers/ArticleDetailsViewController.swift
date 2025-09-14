@@ -118,7 +118,7 @@ class ArticleDetailsViewController: UIViewController {
         NSLayoutConstraint.activate([
             subHeadlineLbl.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 24),
             subHeadlineLbl.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -24),
-            subHeadlineLbl.topAnchor.constraint(equalTo: self.headlineLbl.bottomAnchor, constant: 24),
+            subHeadlineLbl.topAnchor.constraint(equalTo: self.headlineLbl.bottomAnchor, constant: 16),
             subHeadlineLbl.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -24)
         ])
     }
