@@ -17,9 +17,7 @@ class MainTabBarController: UITabBarController {
         let bookmarkNVC = UINavigationController(rootViewController: BookmarkViewController())
         bookmarkNVC.tabBarItem = UITabBarItem(title: "Bookmarks", image: UIImage(systemName: "bookmark"), tag: 1)
         
-        UITabBar.appearance().backgroundColor = .white
-        UITabBar.appearance().layer.borderWidth = 1.0
-        UITabBar.appearance().layer.borderColor = UIColor.gray.cgColor
+        UITabBar.appearance().backgroundColor = .systemFill
         
         viewControllers = [articleNVC, bookmarkNVC]
     }
