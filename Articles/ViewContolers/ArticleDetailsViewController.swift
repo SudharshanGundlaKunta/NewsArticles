@@ -27,8 +27,6 @@ class ArticleDetailsViewController: UIViewController {
     
     private lazy var imageBgView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "news"))
-//        imageView.layer.masksToBounds = true
-//        imageView.layer.cornerRadius = 24.0
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()

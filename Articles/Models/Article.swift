@@ -13,7 +13,6 @@ struct ArticleResponse: Codable {
     let articles: [Article]?
 }
 
-// MARK: - Article
 struct Article: Codable {
     let source: Source
     let author: String?
@@ -25,7 +24,6 @@ struct Article: Codable {
     let content: String?
 }
 
-// MARK: - Source
 struct Source: Codable {
     let id: String?
     let name: String?
